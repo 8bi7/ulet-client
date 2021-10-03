@@ -46,7 +46,7 @@
     <Grid {changeGroupState} />
   {:else}
     <div class="intro">
-      <h1>Hello {name}, this quick demo ULet!</h1>
+      <h1>Hello {name}, this is quick demo ULet!</h1>
       <p>
         End goal is to create something like Stream Deck where user can bind
         action KeyPress/Key combination or action script Mac(JXA/OSA),
@@ -58,9 +58,8 @@
       </p>
       <p>Works only on LAN but needs internet connection.</p>
       <p>
-        🤦‍♂️ doesn't work on Iphone/Ipad right know RFC 1918 (but you need to try)<br
-        />
-        tested on Mac (Chrome, Firefox, Safari)
+        🤦‍♂️ There can be problem with iOS and RFC 1918.<br />
+        Tested on Mac (Chrome, Firefox, Safari)
       </p>
       <a class="link" href="/">get the app</a>
     </div>
@@ -88,9 +87,6 @@
     flex-direction: column;
     justify-content: center;
     max-width: 700px;
-  }
-  .introList {
-    list-style: initial;
   }
   p {
     line-height: 1.9rem;

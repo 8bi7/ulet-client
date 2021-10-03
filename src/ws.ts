@@ -12,7 +12,8 @@ const webSocket = (hostIp) => {
   });
   socket.on('connect', () => {
     error.set('');
-    socket.emit('hostIp', { hostIp });
+    // socket.emit('hostIp', { hostIp });
+    getGroups();
   });
 
   socket.on('open', () => {
@@ -27,7 +28,7 @@ const webSocket = (hostIp) => {
       return error.set(data.message);
     }
     error.set('');
-    getGroups();
+    // getGroups();
   });
   socket.on('groups', (data) => {
     error.set('');

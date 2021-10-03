@@ -14,7 +14,7 @@
   $: mapItems($groups);
   const mapItems = (groups) => {
     let myId = groups[0].id;
-    console.log(typeof myId === 'string');
+    
     if (!groups.length) return;
     items = groups.map((group) => ({
       [COLS]: gridHelp.item({

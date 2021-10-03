@@ -75,16 +75,16 @@
         </div>
       {/if}
     </div>
-    <div
-      class="btn qr"
-      class:btn-hover={deviceHasCamera}
-      on:click={() => {
-        if (!deviceHasCamera) return;
-        input = false;
-        isQrscanner = !isQrscanner;
-      }}
-    >
-      {#if deviceHasCamera}
+    {#if deviceHasCamera}
+      <div
+        class="btn qr"
+        class:btn-hover={deviceHasCamera}
+        on:click={() => {
+          if (!deviceHasCamera) return;
+          input = false;
+          isQrscanner = !isQrscanner;
+        }}
+      >
         <ScanQrSvg />
         {#if isQrscanner}
           <div
@@ -95,8 +95,8 @@
             <MyQrScanner {checkHostIp} />
           </div>
         {/if}
-      {/if}
-    </div>
+      </div>
+    {/if}
   </div>
 </nav>
 

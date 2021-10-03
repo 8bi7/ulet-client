@@ -2,11 +2,9 @@
   import { getContext } from 'svelte';
 
   export let button;
-  export let onClick;
+  // export let onClick;
   const { buttonPress } = getContext('wsContext');
   const handleClick = () => {
-    console.log(button);
-    console.log(typeof button.id === 'string');
     buttonPress(button);
   };
 </script>

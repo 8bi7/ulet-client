@@ -29,7 +29,6 @@
     );
 
     QrScanner.listCameras(true).then((cameras) => {
-      console.log('ListCameras');
       camList = cameras;
       curCamera = cameras.find(
         (camera) =>
@@ -57,7 +56,6 @@
   };
 
   const startScanning = () => {
-    console.log('startScanning');
     scanner.start();
     showScanArae = true;
   };
