@@ -75,16 +75,16 @@
         </div>
       {/if}
     </div>
-    {#if deviceHasCamera}
-      <div
-        class="btn qr"
-        class:btn-hover={deviceHasCamera}
-        on:click={() => {
-          if (!deviceHasCamera) return;
-          input = false;
-          isQrscanner = !isQrscanner;
-        }}
-      >
+    <div
+      class="btn qr"
+      class:btn-hover={deviceHasCamera}
+      on:click={() => {
+        if (!deviceHasCamera) return;
+        input = false;
+        isQrscanner = !isQrscanner;
+      }}
+    >
+      {#if deviceHasCamera}
         <ScanQrSvg />
         {#if isQrscanner}
           <div
@@ -95,8 +95,8 @@
             <MyQrScanner {checkHostIp} />
           </div>
         {/if}
-      </div>
-    {/if}
+      {/if}
+    </div>
   </div>
 </nav>
 
@@ -187,8 +187,8 @@
       var(--theme-shadow-glow),
       var(--theme-shadow-glow)
     );
-    animation: frame-enter 1s forwards ease-in-out reverse,
-      gradient-animation 4s ease-in-out;
+    animation: frame-enter 1s forwards ease-in-out reverse; /* ,
+       gradient-animation 4s ease-in-out; */
   }
   .input-host {
     top: 50px;
@@ -208,14 +208,14 @@
   }
 
   /* motion */
-  @keyframes gradient-animation {
+  /* @keyframes gradient-animation {
     0% {
       background-position: 15% 0%;
     }
     100% {
       background-position: 85% 100%;
     }
-  }
+  } */
 
   @keyframes frame-enter {
     0% {
