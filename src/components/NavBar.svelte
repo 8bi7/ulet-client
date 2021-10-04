@@ -84,8 +84,8 @@
         isQrscanner = !isQrscanner;
       }}
     >
-      <ScanQrSvg />
       {#if deviceHasCamera}
+        <ScanQrSvg />
         {#if isQrscanner}
           <div
             class="qrscanner-wrapper"
@@ -156,6 +156,7 @@
     border-radius: var(--radius-small);
     border: 1px solid var(--theme-text-error);
   }
+
   .btn {
     width: 50px;
     height: 50px;
@@ -166,15 +167,35 @@
     justify-content: center;
   }
 
-  .btn.btn-hover:hover {
-    border-radius: 4px;
-    background-color: var(--theme-shadow-glow);
+  .btn.btn-hover {
+    border-radius: 2px;
+    border: 3px solid var(--theme-shadow-glow);
   }
-
+  /*
+  .btn.btn-hover:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 4px;
+    background-size: 300% 300%;
+  }
+*/
   :global(.btn:not(.btn-hover) svg) {
     fill: var(--theme-shadow-dark);
   }
 
+  /*.btn.btn-hover:hover:after {
+    background: linear-gradient(
+      120deg,
+      var(--theme-shadow-glow),
+      var(--theme-shadow-glow)
+    );
+    animation: frame-enter 1s forwards ease-in-out reverse;  ,
+       gradient-animation 4s ease-in-out; 
+  }*/
   .input-host {
     top: 50px;
     right: -70px;
@@ -191,4 +212,88 @@
     border-radius: 4px;
     background: var(--theme-background);
   }
+
+  /* motion */
+  /* @keyframes gradient-animation {
+    0% {
+      background-position: 15% 0%;
+    }
+    100% {
+      background-position: 85% 100%;
+    }
+  } 
+
+  @keyframes frame-enter {
+    0% {
+      clip-path: polygon(
+        0% 100%,
+        3px 100%,
+        3px 3px,
+        calc(100% - 3px) 3px,
+        calc(100% - 3px) calc(100% - 3px),
+        3px calc(100% - 3px),
+        3px 100%,
+        100% 100%,
+        100% 0%,
+        0% 0%
+      );
+    }
+    25% {
+      clip-path: polygon(
+        0% 100%,
+        3px 100%,
+        3px 3px,
+        calc(100% - 3px) 3px,
+        calc(100% - 3px) calc(100% - 3px),
+        calc(100% - 3px) calc(100% - 3px),
+        calc(100% - 3px) 100%,
+        100% 100%,
+        100% 0%,
+        0% 0%
+      );
+    }
+    50% {
+      clip-path: polygon(
+        0% 100%,
+        3px 100%,
+        3px 3px,
+        calc(100% - 3px) 3px,
+        calc(100% - 3px) 3px,
+        calc(100% - 3px) 3px,
+        calc(100% - 3px) 3px,
+        calc(100% - 3px) 3px,
+        100% 0%,
+        0% 0%
+      );
+    }
+    75% {
+      -webkit-clip-path: polygon(
+        0% 100%,
+        3px 100%,
+        3px 3px,
+        3px 3px,
+        3px 3px,
+        3px 3px,
+        3px 3px,
+        3px 3px,
+        3px 0%,
+        0% 0%
+      );
+    }
+    100% {
+      -webkit-clip-path: polygon(
+        0% 100%,
+        3px 100%,
+        3px 100%,
+        3px 100%,
+        3px 100%,
+        3px 100%,
+        3px 100%,
+        3px 100%,
+        3px 100%,
+        0% 100%
+      );
+    }
+  }
+  */
 </style>

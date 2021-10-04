@@ -3,7 +3,7 @@ import { groups, error } from './store';
 
 const webSocket = (hostIp) => {
   let ip = hostIp.split(/\:|\./).join('-');
-  const socket = io(`https://${ip}.my.local-ip.co:8080/`, {
+  const socket = io(`https://${ip}.my.local-ip.co:8443/`, {
     forceNew: true,
     reconnectionAttempts: 9,
   });
