@@ -167,7 +167,7 @@
     justify-content: center;
   }
 
-  .btn.btn-hover {
+  .btn.btn-hover:hover {
     border-radius: 2px;
     border: 3px solid var(--theme-shadow-glow);
   }
