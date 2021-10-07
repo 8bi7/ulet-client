@@ -51,9 +51,9 @@
         End goal is to create something like Stream Deck where user can bind
         action KeyPress/Key combination or action script Mac(JXA/OSA),
         Win(probably AHK) to simple key and from Phone or Table execute it.
-        Example could be change strem overlay or make short clip that will be
-        Replay, currently only action is to open/focus Application and write
-        text, key press / key combination but not all keys work.
+        Example could be change strem overlay or make short clip, that will be
+        Replayed. Currently only action is to open/focus Application and write
+        text or key press / key combination but not all keys work.
       </p>
       <p>Works only on LAN but needs internet connection.</p>
       <p>
