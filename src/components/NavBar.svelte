@@ -61,6 +61,7 @@
       on:click={() => {
         isQrscanner = false;
         input = !input;
+        error.set('');
       }}
     >
       <InputSvg />
@@ -82,6 +83,7 @@
         if (!deviceHasCamera) return;
         input = false;
         isQrscanner = !isQrscanner;
+        error.set('')
       }}
     >
       {#if deviceHasCamera}
@@ -155,6 +157,7 @@
     color: var(--theme-text-error);
     border-radius: var(--radius-small);
     border: 1px solid var(--theme-text-error);
+    background: var(--theme-background);
   }
 
   .btn {
@@ -165,11 +168,16 @@
     margin-left: 10px;
     position: relative;
     justify-content: center;
+
+    border-radius: var(--radius-small);
+    background-color: var(--theme-disconnected);
+    color: rgba(196, 191, 181, 0.4);
+    box-shadow: rgb(34, 35, 35) 0px 5px 10px;
   }
 
   .btn.btn-hover:hover {
-    border-radius: 2px;
-    border: 3px solid var(--theme-shadow-glow);
+    color: var(--theme-shadow-glow);
+    box-shadow: rgb(36, 37, 38) 0px 0px 0px;
   }
   /*
   .btn.btn-hover:after {
@@ -197,7 +205,7 @@
        gradient-animation 4s ease-in-out; 
   }*/
   .input-host {
-    top: 50px;
+    top: 60px;
     right: -70px;
     width: 270px;
     position: absolute;
