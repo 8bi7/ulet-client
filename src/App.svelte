@@ -61,7 +61,7 @@
         Tested on Mac (Chrome, Firefox, Safari)
       </p>
       <img src="./ulet_quick_demo.gif" alt="ULet quick demo" width="100%">
-      <a class="link" href="/">get the app</a>
+      <a class="link" href="https://dadochudy.gumroad.com/l/EcpjX">get the app</a>
     </div>
   {/if}
 </main>
