@@ -79,6 +79,7 @@
     <div
       class="btn qr"
       class:btn-hover={deviceHasCamera}
+      class:btn-disabled={!deviceHasCamera}
       on:click={() => {
         if (!deviceHasCamera) return;
         input = false;
@@ -86,8 +87,8 @@
         error.set('')
       }}
     >
+    <ScanQrSvg />
       {#if deviceHasCamera}
-        <ScanQrSvg />
         {#if isQrscanner}
           <div
             class="qrscanner-wrapper"
@@ -175,6 +176,10 @@
     box-shadow: rgb(34, 35, 35) 0px 5px 10px;
   }
 
+  .btn.btn-disabled {
+    cursor: default;
+    box-shadow: rgb(36, 37, 38) 0px 0px 0px;
+  }
   .btn.btn-hover:hover {
     color: var(--theme-shadow-glow);
     box-shadow: rgb(36, 37, 38) 0px 0px 0px;
